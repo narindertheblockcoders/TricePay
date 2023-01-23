@@ -76,7 +76,7 @@ async function formSubmitHandler(event){
 
       $(".toggle-password").click(function() {
     
-        $(this).toggleClass("fa-sharp fa-solid fa-eye-splash");
+        $(this).toggleClass("fa fa-fw fa-eye");
         var input = $($(this).attr("toggle"));
         if (input.attr("type") == "password") {
           input.attr("type", "text");
@@ -138,8 +138,7 @@ async function formSubmitHandler(event){
                     autoComplete="on"
                     id="password-field"
                   />   
-               <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password"></span>
-                  {/* <i className="fa-sharp fa-solid fa-eye-slash"></i> */}
+               <span toggle="#password-field" className=" fa-sharp fa-solid fa-eye-slash field-icon toggle-password"></span>
                 </div>
                 <div style={{color:'black',marginBottom:'35px',textAlign:'left',fontSize:'14px'}}>
                     Your password must be at least 8 characters long, should

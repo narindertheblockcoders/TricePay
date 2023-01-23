@@ -140,6 +140,12 @@ form.funds-sec {
   top: -5%;
   margin-left: 0px;
 }
+/* .fa-eye-slash:before {
+  content: "\f070" !important;
+} */
+.fa-eye:before {
+  content: "\f06e";
+}
 
 #buy-sett {
   margin-top: 1.5rem !important;
