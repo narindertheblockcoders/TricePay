@@ -139,7 +139,7 @@ async function formSubmitHandler(event){
                     id="password-field"
                   />   
                <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password"></span>
-                  <i className="fa-sharp fa-solid fa-eye-slash"></i>
+                  {/* <i className="fa-sharp fa-solid fa-eye-slash"></i> */}
                 </div>
                 <div style={{color:'black',marginBottom:'35px',textAlign:'left',fontSize:'14px'}}>
                     Your password must be at least 8 characters long, should
