@@ -263,7 +263,7 @@ const [toggle,setToggle]=useState(false)
           <li className="nav-item">
             <a  className="nav-link " href="/admin/login" onClick={()=>{}}>
             {/* <i className="fa-solid fa-comments"></i> */}
-            <i class="fa-solid fa-power-off" id="i-class" style={{marginBottom:"-3px"}}></i>
+            <i className="fa-solid fa-power-off" id="i-class" style={{marginBottom:"-3px"}}></i>
             <span className="spanic">Logout</span>
               {/* <i className="fa fa-chevron-down" id="icon-cd"></i> */}
             </a>
