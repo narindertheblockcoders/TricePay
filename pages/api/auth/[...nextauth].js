@@ -24,13 +24,13 @@ export default NextAuth({
         if (fa == "false") {
          
           response = await axios.post(
-            "http://13.126.156.148:4001/api/v1/auth/login",
+            "http://192.168.1.95:4000/api/v1/auth/login",
             data
           );
            } else {
           console.log("first", { email, otp: password })
           response = await axios.post(
-            "http://13.126.156.148:4001/api/v1/auth/verifyLoginFa", { email, otp: password }
+            "http://192.168.1.95:4000/api/v1/auth/verifyLoginFa", { email, otp: password }
           )
           console.log(response)
 
