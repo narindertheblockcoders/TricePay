@@ -3,9 +3,10 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Router, useRouter } from "next/router";
+import {  useRouter } from "next/router";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
+import $ from    "jquery"
 
   function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 4000));
@@ -69,6 +70,30 @@ async function formSubmitHandler(event){
   
     const handleClick = () => setLoadingRef(false);
   
+
+    async function jQueryFunction(){
+
+
+      $(".toggle-password").click(function() {
+    
+        $(this).toggleClass("fa-sharp fa-solid fa-eye-splash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+        
+    }
+    
+    useEffect(()=>{
+    jQueryFunction()
+    },[])
+    
+
+
+
   return (
     <div>
       <section className="profile-sec ">
@@ -111,9 +136,12 @@ async function formSubmitHandler(event){
                     name="last-name"
                     ref={passwordInputRef}
                     autoComplete="on"
+                    id="password-field"
                   />   
+               <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  <i class="fa-sharp fa-solid fa-eye-slash"></i>
                 </div>
-                <div style={{color:'white',marginBottom:'35px',textAlign:'left',fontSize:'14px'}}>
+                <div style={{color:'black',marginBottom:'35px',textAlign:'left',fontSize:'14px'}}>
                     Your password must be at least 8 characters long, should
                     contain at least one number and special character have a
                     mixture of uppercase and lowercase letters.

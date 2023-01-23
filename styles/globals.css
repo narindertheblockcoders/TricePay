@@ -593,6 +593,16 @@ header .navbar-light .navbar-nav .nav-link {
   margin-bottom: 0 !important;
      color: black;
 }
+.field-icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: -27px;
+  position: relative;
+  z-index: 2;
+  float: right;
+  color: black !important;
+  cursor: pointer;
+}
 
 .input-sec input{border-radius:"10px" !important; padding-left: 10px !important; height: 41px !important;}
 
