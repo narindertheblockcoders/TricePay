@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         console.log(data, 'Data for Api')
         var config = {
             method: "post",
-            url:  "http://192.168.1.95:4000/api/v1/adminauth/login",data
+            url:  "http://13.126.156.148:4001/api/v1/adminauth/login",data
             // headers: {
             //   Authorization: `Bearer ${session.user.name} `,
             // },data

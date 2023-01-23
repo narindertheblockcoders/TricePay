@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
       var config = {
         method: "post",
-        url: "http://192.168.1.95:4000/api/v1/admin/allUsers",
+        url: "http://13.126.156.148:4001/api/v1/admin/allUsers",
         headers: {
           Authorization: `Bearer ${token} `,
         },
