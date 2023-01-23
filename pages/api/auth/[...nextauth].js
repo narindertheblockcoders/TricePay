@@ -25,7 +25,6 @@ export default NextAuth({
          
           response = await axios.post(
             "http://13.126.156.148:4000/api/v1/auth/login",
-            // http://13.126.156.148:4000/api/v1/adminauth/login
             data
           );
            } else {
