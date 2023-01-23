@@ -584,6 +584,7 @@ header .navbar-light .navbar-nav .nav-link {
    background-color:white;
 }
 
+
 .profile-sec .input-sec .heading-text {
   font-size: 20px;
   font-weight: 600;
@@ -593,7 +594,7 @@ header .navbar-light .navbar-nav .nav-link {
      color: black;
 }
 
-
+.input-sec input{border-radius:"10px" !important; padding-left: 10px !important; height: 41px !important;}
 
 #for-text {
   margin-top: 10px !important;
@@ -4602,7 +4603,7 @@ svg.rd3t-svg {
 }
 
 #i-class {
-  color: white !important;
+  color: black !important;
   font-size: 13px !important;
   margin-top: -2px !important;
   margin-right: 10px !important;
@@ -4617,13 +4618,20 @@ svg.rd3t-svg {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: var(--bg-color);
+  color: white !important;
   background: none;
   font-size: 14px;
 }
 
-.sidebar-nav .nav-link:hover i {
-     color: black;
+.sidebar-nav .nav-link:hover #i-class {
+     color: white !important;
+}
+.sidebar-nav .nav-link.collapsed:hover .spanic{
+  color: white !important;
+}
+
+.sidebar-nav .nav-link:hover #icon-cd {
+color: white !important;
 }
 
 a:hover {
@@ -4649,10 +4657,10 @@ a:hover {
   transform: rotate(180deg);
 }
 
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:focus {
   color: var(--bg-color) !important;
-}
+} */
 
 .sidebar-nav .nav-content {
   padding: 5px 0 0 0;

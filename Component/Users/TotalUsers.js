@@ -12,6 +12,7 @@ import 'react-dots-loader/index.css'
 const TotalUsers = (props) => {
   const [usersData, setUsersData] = useState(null);
   const [mounted,setMounted] = useState(false)
+  const [searchData, setSearchData] = useState()
   const router = useRouter();
 
   async function totalUsers() {
@@ -43,6 +44,21 @@ const TotalUsers = (props) => {
     })
   }
 
+
+  async function searchFn(e){
+  console.log(e,"ype ")
+    const seachData = e
+    const filteredData = usersData?.filter((item)=>{
+      const name = item?.name;
+      return name?.toLowerCase().includes(seachData.toLowerCase());
+    })
+    console.log(filteredData,"filtered data here")
+     setSearchData(filteredData)
+  } 
+
+
+
+
   // function changeUsersPasswordFn(e) {
   //   e.preventDefault();
   //   console.log(e.target.value,"to get the value of the target")
@@ -55,6 +71,7 @@ const TotalUsers = (props) => {
   //   );
   //   router.push("/users/changeUsersPassword");
   // }
+
 
   return (
     <>
@@ -92,11 +109,10 @@ const TotalUsers = (props) => {
                 >
                   <input
                     type="search"
-                    placeholder="search"
+                    placeholder="Search"
                     onChange={(e) => {
-                      match(e);
-                    }}
-                  ></input>
+                      searchFn(e.target.value);}} >
+                    </input>
                 </div>
 
                 <table className="table funds-table mt-5" id="funds-color">
@@ -138,7 +154,8 @@ const TotalUsers = (props) => {
                       
                       </td>
                     </tr> : null}
-                    { usersData?.map((item, id) => {
+                    { searchData == null ? 
+                    usersData?.map((item, id) => {
                       console.log(item, "fghjkjhgfdfghj");
                       return (
                         <tr key={id}>
@@ -174,6 +191,41 @@ const TotalUsers = (props) => {
                           <td></td>
                         </tr>
                       );
+                    }):searchData?.map((item, id)=>{
+                      return(
+                        <tr key={id}>
+                        <td className="total-account">{id + 1}</td>
+                        <td className="total-account">{item.name}</td>
+                        <td className="total-account">{item.email}</td>
+                        {/* <td>
+                          <button
+                            style={{
+                              width: "200px",
+                              borderRadius: "100px",
+                              color: "black",
+                            }}
+                            value={item.id + item.emailId}
+                            onClick={(e) => changeUsersPasswordFn(e)}
+                          >
+                            Change Password
+                          </button>
+                        </td> */}
+                        <td>
+                          <button
+                            style={{
+                              width: "100px",
+                              borderRadius: "100px",
+                              color: "black",
+                            }}
+                            value={item.id}
+                            onClick={(e) => clickHandler(e)}
+                          >
+                            Detail
+                          </button>
+                        </td>
+                        <td></td>
+                      </tr>
+                      )
                     })
                   
 
