@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       console.log(token,"to send the token to api")
       var config = {
         method: "post",
-        url: "http://192.168.1.95:4000/api/v1/admin/dashboard",
+        url: "http://13.126.156.148:4000/api/v1/admin/dashboard",
         headers: {
           Authorization: `Bearer ${token} `,
         },
